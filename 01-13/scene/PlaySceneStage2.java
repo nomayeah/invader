@@ -3,9 +3,9 @@ package com.noma.invader.scene;
 
 import com.noma.invader.Define;
 import com.noma.invader.InvaderGame;
-import com.noma.invader.figther.enemy.EnemyFighterBase;
-import com.noma.invader.figther.enemy.Frisbee;
-import com.noma.invader.figther.enemy.Tongari;
+import com.noma.invader.fighter.enemy.EnemyFighterBase;
+import com.noma.invader.fighter.enemy.Frisbee;
+import com.noma.invader.fighter.enemy.Tongari;
 
 public class PlaySceneStage2 extends PlaySceneBase {
 

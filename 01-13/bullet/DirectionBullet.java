@@ -3,7 +3,7 @@ package com.noma.invader.bullet;
 
 import com.eaglesakura.lib.android.game.math.Vector2;
 import com.noma.invader.R;
-import com.noma.invader.figther.FighterBase;
+import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
 import com.noma.invader.scene.PlaySceneBase;
 

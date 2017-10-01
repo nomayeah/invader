@@ -1,7 +1,7 @@
 package com.noma.invader.bullet;
 
 import com.noma.invader.GameSprite;
-import com.noma.invader.figther.FighterBase;
+import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
 
 public abstract class BulletBase extends GameSprite {

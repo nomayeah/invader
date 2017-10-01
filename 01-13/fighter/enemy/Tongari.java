@@ -1,4 +1,4 @@
-package com.noma.invader.figther.enemy;
+package com.noma.invader.fighter.enemy;
 
 import com.noma.invader.R;
 import com.noma.invader.bullet.DirectionBullet;

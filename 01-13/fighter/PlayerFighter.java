@@ -1,4 +1,4 @@
-package com.noma.invader.figther;
+package com.noma.invader.fighter;
 
 import com.eaglesakura.lib.android.game.math.Vector2;
 import com.noma.invader.Define;

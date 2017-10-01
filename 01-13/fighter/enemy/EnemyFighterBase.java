@@ -1,6 +1,6 @@
-package com.noma.invader.figther.enemy;
+package com.noma.invader.fighter.enemy;
 
-import com.noma.invader.figther.FighterBase;
+import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
 
 public abstract class EnemyFighterBase extends FighterBase {

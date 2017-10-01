@@ -2,7 +2,7 @@ package com.noma.invader.bullet;
 
 import com.noma.invader.R;
 import com.noma.invader.effect.Explosion;
-import com.noma.invader.figther.FighterBase;
+import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
 import com.noma.invader.scene.PlaySceneStage1;
 

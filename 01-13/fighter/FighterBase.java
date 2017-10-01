@@ -1,4 +1,4 @@
-package com.noma.invader.figther;
+package com.noma.invader.fighter;
 
 import android.graphics.Rect;
 
