@@ -5,7 +5,7 @@ import com.noma.invader.InvaderGame;
 import com.noma.invader.bullet.BulletBase;
 import com.noma.invader.effect.EffectBase;
 import com.noma.invader.figther.PlayerFighter;
-import com.noma.invader.figther.enemy.EnemyFigtherBase;
+import com.noma.invader.figther.enemy.EnemyFighterBase;
 import com.noma.invader.input.AttackButton;
 import com.noma.invader.input.JoyStick;
 import com.eaglesakura.lib.android.game.graphics.Color;
@@ -39,7 +39,7 @@ public abstract class PlaySceneBase extends GameSceneBase {
     /**
      * 敵一覧
      */
-    protected List<EnemyFigtherBase> enemies = new ArrayList<EnemyFigtherBase>();
+    protected List<EnemyFighterBase> enemies = new ArrayList<EnemyFighterBase>();
 
     /**
      * 弾一覧
@@ -85,8 +85,8 @@ public abstract class PlaySceneBase extends GameSceneBase {
      * @param bullet
      * @return
      */
-    public EnemyFigtherBase intersectsEnemy(BulletBase bullet) {
-        for (EnemyFigtherBase enemy : enemies) {
+    public EnemyFighterBase intersectsEnemy(BulletBase bullet) {
+        for (EnemyFighterBase enemy : enemies) {
             if (enemy.isIntersect(bullet)) {
                 enemy.onDamage(bullet);
                 return enemy;
@@ -125,9 +125,9 @@ public abstract class PlaySceneBase extends GameSceneBase {
 
         // 敵を全て更新する
         {
-            Iterator<EnemyFigtherBase> iterator = enemies.iterator();
+            Iterator<EnemyFighterBase> iterator = enemies.iterator();
             while (iterator.hasNext()) {
-                EnemyFigtherBase enemy = iterator.next();
+                EnemyFighterBase enemy = iterator.next();
                 enemy.update();
                 if (enemy.isDead() || !enemy.isAppeaedDisplay()) {
                     iterator.remove();
@@ -170,7 +170,7 @@ public abstract class PlaySceneBase extends GameSceneBase {
         }
 
         // 敵を全て描画する
-        for (EnemyFigtherBase enemy : enemies) {
+        for (EnemyFighterBase enemy : enemies) {
             enemy.draw();
         }
 

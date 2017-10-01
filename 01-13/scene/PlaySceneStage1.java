@@ -3,9 +3,8 @@ package com.noma.invader.scene;
 
 import com.noma.invader.Define;
 import com.noma.invader.InvaderGame;
-import com.noma.invader.figther.enemy.EnemyFigtherBase;
+import com.noma.invader.figther.enemy.EnemyFighterBase;
 import com.noma.invader.figther.enemy.Frisbee;
-import com.eaglesakura.lib.android.game.scene.SceneManager;
 
 public class PlaySceneStage1 extends PlaySceneBase {
 
@@ -19,7 +18,7 @@ public class PlaySceneStage1 extends PlaySceneBase {
     @Override
     protected void initializeEnemy() {
         // 敵の配置テーブルを作成する
-        final EnemyFigtherBase[][] enemyTable = {
+        final EnemyFighterBase[][] enemyTable = {
             // 後列
             {
                 new Frisbee(this), new Frisbee(this), new Frisbee(this), new Frisbee(this)
@@ -43,7 +42,7 @@ public class PlaySceneStage1 extends PlaySceneBase {
             // １ラインの横方向をfor文で見る
             for (int index = 0; index < lineEnemyNum; ++index) {
                 //　配置対象の敵をテーブルから取り出す
-                EnemyFigtherBase enemy = enemyTable[line][index];
+                EnemyFighterBase enemy = enemyTable[line][index];
 
                 // 配置する敵が存在する場合、位置を設定する
                 if (enemy != null) {

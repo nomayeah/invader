@@ -1,22 +1,25 @@
 package com.noma.invader.figther.enemy;
 
 import com.noma.invader.R;
-import com.noma.invader.bullet.FrisbeeBullet;
+import com.noma.invader.bullet.DirectionBullet;
 import com.noma.invader.scene.GameSceneBase;
 import com.noma.invader.scene.PlaySceneBase;
 
-/**
- * Created by y_nonaka on 2017/07/19.
- */
-
-public class Tongari extends EnemyFigtherBase {
+public class Tongari extends EnemyFighterBase {
     public Tongari(GameSceneBase scene) {
         super(scene);
         sprite = loadSprite(R.drawable.enemy_01); // 敵画像読み込み
+        hp = 50; // HP50のボスキャラにする。
     }
 
     void fire() {
-        FrisbeeBullet bullet = new FrisbeeBullet(scene, this);
+        // 方向弾を生成する
+        DirectionBullet bullet = new DirectionBullet(scene, this);
+
+        // 現在のフレーム数の角度へ10の速度で打ち込む
+        bullet.setPosition(120 + (frameCount % 120), 10);
+
+        // シーンに弾を追加する
         ((PlaySceneBase) scene).addBullet(bullet);
     }
 
@@ -25,13 +28,9 @@ public class Tongari extends EnemyFigtherBase {
         // スーバークラスの処理を行わせる
         super.update();
         // 指定したフレームで処理を行わせる
-        if (frameCount == 30 * 5) {
-            // 150フレーム経過したら弾を撃つ、その後カウンターリセット
-            fire(); // 毎フレーム　弾を撃つ
-            resetFrameCount();
-        } else if (frameCount % 30 == 0) {
-            // 30フレームに１回、１５フレーム前進する
-            offsetPosition(0, 15);
+        if (frameCount % 10 == 0) {
+            // 10フレーム経過したら弾を撃つ
+            fire();
         }
     }
 }

@@ -13,7 +13,7 @@ public abstract class FighterBase extends GameSprite {
      * 戦闘機のヒットポイント
      * デフォルトは１
      */
-    int hp = 1;
+    protected int hp = 1;
 
     public FighterBase(GameSceneBase scene){
         super(scene);

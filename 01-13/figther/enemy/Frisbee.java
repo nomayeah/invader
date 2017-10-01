@@ -9,7 +9,7 @@ import com.noma.invader.scene.PlaySceneStage1;
  * Created by y_nonaka on 2017/07/19.
  */
 
-public class Frisbee extends EnemyFigtherBase {
+public class Frisbee extends EnemyFighterBase {
     public Frisbee(GameSceneBase scene) {
         super(scene);
         sprite = loadSprite(R.drawable.enemy_00); // 敵画像読み込み

@@ -3,13 +3,13 @@ package com.noma.invader.figther.enemy;
 import com.noma.invader.figther.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
 
-public abstract class EnemyFigtherBase extends FighterBase {
+public abstract class EnemyFighterBase extends FighterBase {
     /**
      * 生成されてからのフレームを記録する
      */
     protected int frameCount = 0;
 
-    public EnemyFigtherBase(GameSceneBase scene) {
+    public EnemyFighterBase(GameSceneBase scene) {
         super(scene);
     }
 
