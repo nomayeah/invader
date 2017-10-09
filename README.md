@@ -14,6 +14,6 @@
 =>　「git remote add upstream https://github.com/nomayeah/invader.git」<br><br>
 
 ・pullして最新版に更新する<br>
-=>　「git pull upstream master」<br><br>
+=>　「git pull upstream master」<br><br><br><br><br><br><br><br>
 
-
+・その他に画像など入れました。
