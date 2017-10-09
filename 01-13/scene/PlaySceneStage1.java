@@ -5,6 +5,7 @@ import com.noma.invader.Define;
 import com.noma.invader.InvaderGame;
 import com.noma.invader.fighter.enemy.EnemyFighterBase;
 import com.noma.invader.fighter.enemy.Frisbee;
+import com.eaglesakura.lib.android.game.scene.SceneManager;
 
 public class PlaySceneStage1 extends PlaySceneBase {
 
@@ -52,7 +53,7 @@ public class PlaySceneStage1 extends PlaySceneBase {
                     enemy.setPosition(Define.PLAY_AREA_LEFT + x, y);
 
                     // 敵リストへ登録する
-                    enemies .add(enemy);
+                    enemies.add(enemy);
                 }
             }
             // Y位置を１ライン前線へ下げる

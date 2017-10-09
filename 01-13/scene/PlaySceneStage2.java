@@ -1,6 +1,5 @@
 package com.noma.invader.scene;
 
-
 import com.noma.invader.Define;
 import com.noma.invader.InvaderGame;
 import com.noma.invader.fighter.enemy.EnemyFighterBase;

@@ -3,7 +3,7 @@ package com.noma.invader.bullet;
 import com.noma.invader.R;
 import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
-import com.noma.invader.scene.PlaySceneStage1;
+import com.noma.invader.scene.PlaySceneBase;
 
 public class FrisbeeBullet extends BulletBase {
     public FrisbeeBullet(GameSceneBase scene, FighterBase shooter) {
@@ -17,7 +17,7 @@ public class FrisbeeBullet extends BulletBase {
     public void update() {
         offsetPosition(0, 10); //　下に向かって移動
 
-        FighterBase player = ((PlaySceneStage1) scene).getPlayer();
+        FighterBase player = ((PlaySceneBase) scene).getPlayer();
         // プレイヤーと弾が衝突していたらダメージ処理を行う
         if (player.isIntersect(this)) {
             enable = false;

@@ -3,11 +3,7 @@ package com.noma.invader.fighter.enemy;
 import com.noma.invader.R;
 import com.noma.invader.bullet.FrisbeeBullet;
 import com.noma.invader.scene.GameSceneBase;
-import com.noma.invader.scene.PlaySceneStage1;
-
-/**
- * Created by y_nonaka on 2017/07/19.
- */
+import com.noma.invader.scene.PlaySceneBase;
 
 public class Frisbee extends EnemyFighterBase {
     public Frisbee(GameSceneBase scene) {
@@ -17,7 +13,7 @@ public class Frisbee extends EnemyFighterBase {
 
     void fire() {
         FrisbeeBullet bullet = new FrisbeeBullet(scene, this);
-        ((PlaySceneStage1) scene).addBullet(bullet);
+        ((PlaySceneBase) scene).addBullet(bullet);
     }
 
     @Override
@@ -29,6 +25,9 @@ public class Frisbee extends EnemyFighterBase {
             // 150フレーム経過したら弾を撃つ、その後カウンターリセット
             fire(); // 毎フレーム　弾を撃つ
             resetFrameCount();
+        } else if (frameCount % 30 == 0) {
+            //30フレームに１回、15フレーム前進する
+            offsetPosition(0, 15);
         }
     }
 }

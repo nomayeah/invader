@@ -7,7 +7,8 @@ import com.noma.invader.bullet.PlayerBullet;
 import com.noma.invader.input.AttackButton;
 import com.noma.invader.input.JoyStick;
 import com.noma.invader.scene.GameSceneBase;
-import com.noma.invader.scene.PlaySceneStage1;
+import com.noma.invader.scene.PlaySceneBase;
+
 
 public class PlayerFighter extends FighterBase {
 
@@ -57,7 +58,7 @@ public class PlayerFighter extends FighterBase {
 
     void fire() {
         PlayerBullet bullet = new PlayerBullet(scene, this);
-        ((PlaySceneStage1) scene).addBullet(bullet);
+        ((PlaySceneBase) scene).addBullet(bullet);
     }
 
     @Override

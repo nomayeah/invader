@@ -7,10 +7,6 @@ import com.noma.invader.GameSprite;
 import com.noma.invader.R;
 import com.noma.invader.scene.GameSceneBase;
 
-/**
- * Created by y_nonaka on 2017/07/19.
- */
-
 public class AttackButton extends GameSprite {
     /**
      * 押してない時のボタン画像
@@ -60,7 +56,7 @@ public class AttackButton extends GameSprite {
     @Override
     public void update() {
         // 離れているか、離した瞬間のタッチ座標があるか確認する
-        TouchPoint touchPoint = sprite.findIntersectReleaseOnce(scene.getMultiTouchInput());
+        TouchPoint touchPoint = sprite.findIntersectTouchOrReleaseOnce(scene.getMultiTouchInput());
 
         if (touchPoint != null) {
             // 該当ポイントがあったので、「離した瞬間」ならば攻撃タイミングとして認識する

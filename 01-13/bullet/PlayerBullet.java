@@ -4,7 +4,7 @@ import com.noma.invader.R;
 import com.noma.invader.effect.Explosion;
 import com.noma.invader.fighter.FighterBase;
 import com.noma.invader.scene.GameSceneBase;
-import com.noma.invader.scene.PlaySceneStage1;
+import com.noma.invader.scene.PlaySceneBase;
 
 public class PlayerBullet extends BulletBase {
     public PlayerBullet(GameSceneBase scene, FighterBase shooter) {
@@ -17,12 +17,12 @@ public class PlayerBullet extends BulletBase {
     public void update() {
         offsetPosition(0, -10); // 上に向かって移動
 
-        if (((PlaySceneStage1) scene).intersectsEnemy(this) != null) {
+        if (((PlaySceneBase) scene).intersectsEnemy(this) != null) {
             enable = false;
 
             {
                 Explosion exp = new Explosion(scene, this);
-                ((PlaySceneStage1) scene).addEffect(exp);
+                ((PlaySceneBase) scene).addEffect(exp);
             }
         }
     }

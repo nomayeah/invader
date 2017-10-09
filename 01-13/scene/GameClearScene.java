@@ -1,13 +1,14 @@
 package com.noma.invader.scene;
 
+import com.noma.invader.Define;
+import com.noma.invader.InvaderGame;
+import com.noma.invader.R;
 import com.eaglesakura.lib.android.game.graphics.Color;
 import com.eaglesakura.lib.android.game.graphics.Sprite;
 import com.eaglesakura.lib.android.game.input.MultiTouchInput;
 import com.eaglesakura.lib.android.game.scene.SceneBase;
 import com.eaglesakura.lib.android.game.scene.SceneManager;
-import com.noma.invader.Define;
-import com.noma.invader.InvaderGame;
-import com.noma.invader.R;
+
 
 public class GameClearScene extends GameSceneBase {
     /**

@@ -17,7 +17,7 @@ public class Tongari extends EnemyFighterBase {
         DirectionBullet bullet = new DirectionBullet(scene, this);
 
         // 現在のフレーム数の角度へ10の速度で打ち込む
-        bullet.setPosition(120 + (frameCount % 120), 10);
+        bullet.setup(120 + (frameCount % 120), 10);
 
         // シーンに弾を追加する
         ((PlaySceneBase) scene).addBullet(bullet);
